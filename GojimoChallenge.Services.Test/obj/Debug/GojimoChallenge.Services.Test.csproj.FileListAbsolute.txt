@@ -1,0 +1,8 @@
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Services.Test\bin\Debug\GojimoChallenge.Services.Test.dll
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Services.Test\bin\Debug\GojimoChallenge.Services.Test.pdb
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Services.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Services.Test\bin\Debug\Newtonsoft.Json.dll
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Services.Test\bin\Debug\Newtonsoft.Json.xml
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Services.Test\obj\Debug\GojimoChallenge.Services.Test.dll
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Services.Test\obj\Debug\GojimoChallenge.Services.Test.pdb
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Services.Test\obj\Debug\GojimoChallenge.Services.Test.csprojResolveAssemblyReference.cache

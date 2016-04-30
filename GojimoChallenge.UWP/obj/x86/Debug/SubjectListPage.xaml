@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="GojimoChallenge.UWP.SubjectListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GojimoChallenge.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:qualifications="using:GojimoChallenge.ViewModels.ViewModels.Qualifications"
+    xmlns:subjects="using:GojimoChallenge.ViewModels.ViewModels.Subjects"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <subjects:SubjectsListViewModel></subjects:SubjectsListViewModel>
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView ItemsSource="{Binding Subjects}" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <Setter Property="Margin" Value="0" />
+                    <Setter Property="Padding" Value="0" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="50" Background="{Binding Colour}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="1"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="20 0 0 0" VerticalAlignment="Center" FontSize="20" Text="{Binding Title}"></TextBlock>
+                        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="1" Background="LightGray"></Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
+

@@ -1,0 +1,15 @@
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.dll
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.pdb
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\bin\Debug\Autofac.dll
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\bin\Debug\Newtonsoft.Json.dll
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\bin\Debug\Autofac.xml
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\bin\Debug\Newtonsoft.Json.xml
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.csprojResolveAssemblyReference.cache
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.dll
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.pdb
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallenge\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.dll.mdb
