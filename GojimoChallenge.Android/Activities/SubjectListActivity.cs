@@ -6,7 +6,10 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using GojimoChallenge.Android.Adapters;
+using GojimoChallenge.ViewModels.ViewModels.Qualifications;
 using GojimoChallenge.ViewModels.ViewModels.Subjects;
+using AlertDialog = Android.Support.V7.App.AlertDialog;
+using Result = GojimoChallenge.Contracts.Results.Result;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace GojimoChallenge.Android.Activities
@@ -29,22 +32,31 @@ namespace GojimoChallenge.Android.Activities
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            
-                OnBackPressed();
-            
+            OnBackPressed();
             return base.OnOptionsItemSelected(item);
         }
 
-        private void OnDataLoaded(string e)
+        private void OnDataLoaded(NotifyDataResult e)
         {
-            RecyclerView rView = FindViewById<RecyclerView>(Resource.Id.subject_layout_recyclerView);
             ProgressBar pBar = FindViewById<ProgressBar>(Resource.Id.subject_layout_progressBar);
             pBar.Visibility = ViewStates.Gone;
-            var layout = new LinearLayoutManager(this);
-            rView.SetLayoutManager(layout);
-            rView.HasFixedSize = true;
-            var mAdapter = new SubjectAdapter(VModel.Subjects);
-            rView.SetAdapter(mAdapter);
+            if (e.Result == Result.Ok)
+            {
+                RecyclerView rView = FindViewById<RecyclerView>(Resource.Id.subject_layout_recyclerView);
+                var layout = new LinearLayoutManager(this);
+                rView.SetLayoutManager(layout);
+                rView.HasFixedSize = true;
+                var mAdapter = new SubjectAdapter(VModel.Subjects);
+                rView.SetAdapter(mAdapter);
+            }
+            else
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.SetTitle("An error ocorred");
+                builder.SetNeutralButton("OK", (sender, args) => { });
+                builder.SetMessage(e.ErrorMessage);
+                builder.Show();
+            }
         }
 
         public SubjectsListViewModel VModel { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reactive;
 using Autofac;
 using GojimoChallenge.Contracts.IoC;
 using GojimoChallenge.Contracts.Services;
@@ -52,11 +53,11 @@ namespace GojimoChallenge.ViewModels.ViewModels.Qualifications
                     Qualifications.Add(new QualificationDataModel(qualification));
                 }
             }
-            else
+            getData.OnNext(new NotifyDataResult
             {
-                //TODO showerrormessage
-            }
-            getData.OnNext("");
+                Result = result.Result,
+                ErrorMessage = result.ErrorMessage
+            });
         }
     }
 }

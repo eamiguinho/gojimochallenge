@@ -1,15 +1,24 @@
 using System;
 using System.Collections.ObjectModel;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
 using Android.Support.V7.Widget;
 using Android.Views;
 using GojimoChallenge.ViewModels.DataModels;
+using GojimoChallenge.ViewModels.ViewModels.Qualifications;
 
 namespace GojimoChallenge.Android.Adapters
 {
     public class QualificationAdapter : RecyclerView.Adapter
     {
         private ObservableCollection<QualificationDataModel> _qualifications;
-        public event EventHandler<int> ItemClick;
+
+        public IObservable<int> ItemClick
+        {
+            get { return _itemClick.AsObservable(); }
+        }
+
+        private Subject<int> _itemClick = new Subject<int>();
 
         public QualificationAdapter(ObservableCollection<QualificationDataModel> qualifications)
         {
@@ -34,8 +43,7 @@ namespace GojimoChallenge.Android.Adapters
 
         void OnClick(int position)
         {
-            if (ItemClick != null)
-                ItemClick(this, position);
+            _itemClick.OnNext(position);
         }
     }
 }

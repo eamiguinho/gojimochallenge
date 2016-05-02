@@ -39,7 +39,7 @@ namespace GojimoChallenge.Services.Implementation.Qualifications
             var savedQualifications =  await _localStorageDataService.GetSavedQualifications();
             if (savedQualifications != null && savedQualifications.Count > 0)
                 return new DataResult<List<IQualification>>(savedQualifications);
-            return new DataResult<List<IQualification>>(Result.Error);
+            return qualifications;
         }
 
         public void SetCurrentQualification(IQualification qual)

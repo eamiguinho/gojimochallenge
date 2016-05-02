@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Acr.Settings;
@@ -24,11 +25,18 @@ namespace GojimoChallenge.DataServices.Local.Implementation.Qualifications
 
         public async Task<List<IQualification>> GetSavedQualifications()
         {
-            IFolder rootFolder = FileSystem.Current.LocalStorage;
-            IFile file = await rootFolder.GetFileAsync("qualifications.json");
-            var text = await file.ReadAllTextAsync();
-            var savedDtos = JsonConvert.DeserializeObject<List<QualificationDto>>(text);
-            return savedDtos.Select(QualificationDtoFactory.Create).ToList();
+            try
+            {
+                IFolder rootFolder = FileSystem.Current.LocalStorage;
+                IFile file = await rootFolder.GetFileAsync("qualifications.json");
+                var text = await file.ReadAllTextAsync();
+                var savedDtos = JsonConvert.DeserializeObject<List<QualificationDto>>(text);
+                return savedDtos.Select(QualificationDtoFactory.Create).ToList();
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
 
         public string GetETag()

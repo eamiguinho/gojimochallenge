@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Autofac;
 using GalaSoft.MvvmLight;
 using GojimoChallenge.Contracts.IoC;
+using GojimoChallenge.Contracts.Results;
 using GojimoChallenge.Contracts.Services;
 using GojimoChallenge.ViewModels.DataModels;
 using GojimoChallenge.ViewModels.ViewModels.Qualifications;
@@ -31,16 +32,19 @@ namespace GojimoChallenge.ViewModels.ViewModels.Subjects
         }
 
 
-        public void LoadData()
+        public override void LoadData()
         {
             var service = Ioc.Container.Resolve<IQualificationService>();
-            var result = service.GetCurrentQualificiation();
-            SelectedQualificationTitle = string.Format("{0} Subjects",result.Name);
-            foreach (var subjects in result.Subjects)
+            var qualification = service.GetCurrentQualificiation();
+            SelectedQualificationTitle = string.Format("{0} Subjects", qualification.Name);
+            foreach (var subjects in qualification.Subjects)
             {
                 Subjects.Add(new SubjectDataModel(subjects));
             }
-            getData.OnNext("");
+            getData.OnNext(new NotifyDataResult
+            {
+                Result = Result.Ok
+            });
         }
 
         public string SelectedQualificationTitle
