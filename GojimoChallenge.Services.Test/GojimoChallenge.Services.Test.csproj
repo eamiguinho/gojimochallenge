@@ -35,6 +35,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Acr.Settings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Acr.Settings.5.1.0\lib\net45\Acr.Settings.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Acr.Settings.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Acr.Settings.5.1.0\lib\net45\Acr.Settings.Interface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GojimoChallenge.Contracts.Fakes">
+      <HintPath>FakesAssemblies\GojimoChallenge.Contracts.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="GojimoChallenge.DataServices.Implementation.Fakes">
+      <HintPath>FakesAssemblies\GojimoChallenge.DataServices.Implementation.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -54,11 +75,30 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="QualificationServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Fakes Include="Fakes\GojimoChallenge.Contracts.fakes" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GojimoChallenge.Contracts\GojimoChallenge.Contracts.csproj">
+      <Project>{68F27986-470F-41B3-AE01-955D3B1A0545}</Project>
+      <Name>GojimoChallenge.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GojimoChallenge.DataServices.Implementation\GojimoChallenge.DataServices.Online.Implementation.csproj">
+      <Project>{9EA5EDF3-F201-4464-A2A0-6471FD1DE8E3}</Project>
+      <Name>GojimoChallenge.DataServices.Online.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GojimoChallenge.Models\GojimoChallenge.Models.csproj">
+      <Project>{53EBEC87-5D91-4422-8A17-1A39186CEF7B}</Project>
+      <Name>GojimoChallenge.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GojimoChallenge.Services.Implementation\GojimoChallenge.Services.Implementation.csproj">
+      <Project>{D6863E48-5947-451B-8DB4-E9B41FF621B1}</Project>
+      <Name>GojimoChallenge.Services.Implementation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

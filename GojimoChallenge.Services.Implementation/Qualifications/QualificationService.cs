@@ -18,44 +18,28 @@ namespace GojimoChallenge.Services.Implementation.Qualifications
     {
         private readonly IQualificationDataService _dataService;
         private IQualification _currentQualification;
+        private IQualificationLocalStorageDataService _localStorageDataService;
 
-        public QualificationService(IQualificationDataService dataService)
+        public QualificationService(IQualificationDataService dataService, IQualificationLocalStorageDataService localStorageDataService)
         {
             _dataService = dataService;
+            _localStorageDataService = localStorageDataService;
         }
 
         public async Task<DataResult<List<IQualification>>> GetQualifications()
         {
-            var eTag = Settings.Local.Get<string>("eTag", string.Empty);
+            var eTag = _localStorageDataService.GetETag();
             var qualifications = await _dataService.GetQualifications(eTag);
             if (qualifications.IsOk)
             {
-                SaveQualifications(qualifications.Data);
-                Settings.Local.Set("eTag",qualifications.ETag);
+                _localStorageDataService.SaveQualifications(qualifications.Data);
+                _localStorageDataService.SaveETag(qualifications.ETag);
                 return qualifications;
             }
-            var savedQualifications =  await GetSavedQualifications();
-            if (savedQualifications != null)
+            var savedQualifications =  await _localStorageDataService.GetSavedQualifications();
+            if (savedQualifications != null && savedQualifications.Count > 0)
                 return new DataResult<List<IQualification>>(savedQualifications);
             return new DataResult<List<IQualification>>(Result.Error);
-        }
-
-        private async Task<List<IQualification>> GetSavedQualifications()
-        {
-            IFolder rootFolder = FileSystem.Current.LocalStorage;
-            IFile file = await rootFolder.GetFileAsync("qualifications.json");
-            var text = await file.ReadAllTextAsync();
-            var savedDtos = JsonConvert.DeserializeObject<List<QualificationDto>>(text);
-            return savedDtos.Select(QualificationDtoFactory.Create).ToList();
-        }
-
-        private async void SaveQualifications(List<IQualification> data)
-        {
-            IFolder rootFolder = FileSystem.Current.LocalStorage;
-            var dtoList = data.Select(QualificationDtoFactory.GetDto);
-            IFile file = await rootFolder.CreateFileAsync("qualifications.json",
-                CreationCollisionOption.ReplaceExisting);
-            await file.WriteAllTextAsync(JsonConvert.SerializeObject(dtoList));
         }
 
         public void SetCurrentQualification(IQualification qual)

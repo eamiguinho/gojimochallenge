@@ -180,6 +180,10 @@
       <Project>{9EA5EDF3-F201-4464-A2A0-6471FD1DE8E3}</Project>
       <Name>GojimoChallenge.DataServices.Online.Implementation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GojimoChallenge.DataServices.Local.Implementation\GojimoChallenge.DataServices.Local.Implementation.csproj">
+      <Project>{2D772A80-F531-40C2-90F9-226D879F1BFD}</Project>
+      <Name>GojimoChallenge.DataServices.Local.Implementation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GojimoChallenge.Models\GojimoChallenge.Models.csproj">
       <Project>{53EBEC87-5D91-4422-8A17-1A39186CEF7B}</Project>
       <Name>GojimoChallenge.Models</Name>
