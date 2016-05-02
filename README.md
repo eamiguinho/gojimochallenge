@@ -3,6 +3,7 @@
 ## Objective
 
 Develop a very simple working application on your chosen platform (Android / iOS / Web) with the following functionality: 
+
 1. Read the following JSON feed containing a list of qualiﬁcations (a sample is presented below for your reference): https://api.gojimo.net/api/v4/qualiﬁcations 
 2. Display a list of qualiﬁcations based on the data provided by the feed. 
 3. Allow users to click a qualiﬁcation to be presented with a list of subjects for that qualiﬁcation.
