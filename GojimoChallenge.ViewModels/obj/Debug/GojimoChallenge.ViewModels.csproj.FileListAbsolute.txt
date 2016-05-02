@@ -54,5 +54,3 @@ C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.ViewModels\obj\Debug\GojimoCh
 C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.ViewModels\obj\Debug\GojimoChallenge.ViewModels.pdb
 C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.ViewModels\obj\Debug\GojimoChallenge.ViewModels.dll.mdb
 C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.ViewModels\bin\Debug\GojimoChallenge.ViewModels.dll.mdb
-C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.ViewModels\obj\Debug\GojimoChallenge.ViewModels.dll.mdb
-C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.ViewModels\bin\Debug\GojimoChallenge.ViewModels.dll.mdb

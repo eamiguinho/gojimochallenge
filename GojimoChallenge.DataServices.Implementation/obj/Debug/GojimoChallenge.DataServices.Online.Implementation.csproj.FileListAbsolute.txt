@@ -24,5 +24,3 @@ C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.DataServices.Implementation\o
 C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.DataServices.Implementation\obj\Debug\GojimoChallenge.DataServices.Implementation.pdb
 C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.DataServices.Implementation\obj\Debug\GojimoChallenge.DataServices.Implementation.dll.mdb
 C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.DataServices.Implementation\bin\Debug\GojimoChallenge.DataServices.Implementation.dll.mdb
-C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.DataServices.Implementation\obj\Debug\GojimoChallenge.DataServices.Implementation.dll.mdb
-C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.DataServices.Implementation\bin\Debug\GojimoChallenge.DataServices.Implementation.dll.mdb
