@@ -19,6 +19,8 @@ Whilst not essential, we will be very pleased to see you take the challenge furt
 ## Developer resume
 Every point of the objectives were done in 2 different platforms Android as requested and Universal Windows App to show that is possible to reach 3 new platforms (Windows 10, Windows Phone 10 and Xbox) with a lot code shared with Android application.
 
+I tried to implement all bonus points, the point 3. I used If-None-Match header with Etag stored from the last 200 OK GET, Unit testing I used Microsoft Fakes to Stub Service layer dependencies (OnlineService / LocalService).
+
 #### Technologies & Patterns used
 1. Onion Architecture, DDD (Domain driven design), MVVM were the patterns used in this challenge.
 2. Dependency Injection, IoC, Microsoft Fakes (Need VS Enterprise).
