@@ -46,3 +46,9 @@ C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\obj\Debug\GojimoCha
 C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.dll.mdb
 C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.dll.mdb
 C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\obj\Debug\GojimoChallenge.Contracts.dll.mdb
+C:\devBuddies\GojimoChallengeFinal\GojimoChallenge.Contracts\bin\Debug\GojimoChallenge.Contracts.dll.mdb

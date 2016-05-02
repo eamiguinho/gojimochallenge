@@ -1824,22 +1824,25 @@ namespace GojimoChallenge.Android
 			public const int abc_textfield_search_material = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int design_fab_background = 2130837579;
+			public const int arrowup = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int design_snackbar_background = 2130837580;
+			public const int design_fab_background = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int ic_arrow = 2130837581;
+			public const int design_snackbar_background = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int ic_launcher = 2130837582;
-			
-			// aapt resource value: 0x7f020050
-			public const int notification_template_icon_bg = 2130837584;
+			public const int ic_arrow = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int splash_image = 2130837583;
+			public const int ic_launcher = 2130837583;
+			
+			// aapt resource value: 0x7f020051
+			public const int notification_template_icon_bg = 2130837585;
+			
+			// aapt resource value: 0x7f020050
+			public const int splash_image = 2130837584;
 			
 			static Drawable()
 			{
