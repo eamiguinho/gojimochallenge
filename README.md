@@ -23,7 +23,7 @@ I tried to implement all bonus points, the point 3. I used If-None-Match header 
 
 #### Technologies & Patterns used
 1. Onion Architecture, DDD (Domain driven design), MVVM were the patterns used in this challenge.
-2. Dependency Injection, IoC, Microsoft Fakes (Need VS Enterprise).
+2. Dependency Injection, IoC, Microsoft Fakes (Need VS Enterprise), Rx.NET (Reactive Extensions)
 
 
 
